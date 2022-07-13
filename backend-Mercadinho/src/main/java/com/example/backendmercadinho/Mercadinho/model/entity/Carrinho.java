@@ -1,13 +1,13 @@
 package com.example.backendmercadinho.Mercadinho.model.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Carrinho {
@@ -20,4 +20,12 @@ public class Carrinho {
     @ManyToOne
     private FormaPagamento formaPagamento;
 
+    public Object getId() {
+        return id;
+    }
+
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

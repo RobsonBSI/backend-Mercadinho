@@ -1,6 +1,7 @@
 package com.example.backendmercadinho.Mercadinho.model.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,23 +9,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-@Entity
-
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class FormaPagamento {
+@Builder
+@Entity
+public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String formaPagamento;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
-    public Object getId() {
-        return id;
-    }
+    private String login;
 
+    private String senha;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private boolean admin;
 }

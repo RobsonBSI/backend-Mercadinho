@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cliente {
@@ -27,4 +27,13 @@ public class Cliente {
     private String estado;
     private String telefone;
     private String email;
+
+    public Object getId() {
+        return id;
+    }
+
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Produto {
@@ -23,4 +23,12 @@ public class Produto {
     private Integer estoqueMin;
     private Integer pontoRessuprimento;
 
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
